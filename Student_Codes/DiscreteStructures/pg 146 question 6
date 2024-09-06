@@ -1,0 +1,40 @@
+set_a = {2, 4, 6}
+set_b = {2, 6}
+set_c = {4, 6}
+set_d = {4, 6, 8}
+
+if set_a.issubset(set_b):
+    print('A is subset of B')
+if set_a.issubset(set_c):
+    print('A is subset of C')
+if set_a.issubset(set_d):
+    print('A is subset of D')
+if set_b.issubset(set_a):
+    print('B is subset of A')
+if set_b.issubset(set_c):
+    print('B is subset of C')
+if set_b.issubset(set_d):
+    print('B is subset of D')
+if set_c.issubset(set_a):
+    print('C is subset of A')
+if set_c.issubset(set_b):
+    print('C is subset of B')
+if set_c.issubset(set_d):
+    print('C is subset of D')
+if set_d.issubset(set_a):
+    print('D is subset of A')
+if set_d.issubset(set_b):
+    print('D is subset of B')
+if set_d.issubset(set_c):
+    print('D is subset of C')
+
+
+
+
+
+
+
+
+
+
+
