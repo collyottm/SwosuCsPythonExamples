@@ -1,0 +1,51 @@
+quarters = .25
+dimes = .10
+nickels = .05
+pennies = .01
+
+currency_list = [quarters, dimes, nickels, pennies]
+currency_names = ['quarter', 'dime', 'nickel', 'penny']
+# user_entered_amount = int(input("What is your amount in dollars? "))
+user_entered_amount = 1.45
+
+
+for index in range(len(currency_list)):
+    num_coins = user_entered_amount // currency_list[index]
+    if num_coins == 0:
+        print(f'0 {currency_names[index]}s')
+    elif num_coins == 1:
+        print(f'1 {currency_names[index]}')
+    else:
+        print(f'{int(num_coins)} {currency_names[index]}s')
+    user_entered_amount = user_entered_amount % currency_list[index]
+
+
+
+
+
+num_quarters = user_entered_amount // quarters
+if num_quarters == 0:
+    print('0 quarters')
+else:
+    print(f'{num_quarters} quarters')
+change_left = user_entered_amount % quarters
+
+num_dimes = change_left // dimes
+if num_dimes == 0:
+    print('0 dimes')
+else:
+    print(f'{num_dimes} dimes')
+change_left = change_left % dimes
+
+num_nickels = change_left // nickels
+if num_nickels == 0:
+    print('0 nickels')
+else:
+    print(f'{num_nickels} nickels')
+change_left = change_left % nickels
+
+num_pennies = change_left // pennies
+if num_pennies == 0:
+    print('0 pennies')
+else:
+    print(f'{num_pennies} pennies')
